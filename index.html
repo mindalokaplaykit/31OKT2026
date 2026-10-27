@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c1625">
+  <meta name="description" content="The Growth Challenge — Mission Control. Informasi misi, countdown 31 Oktober 2026 pukul 10.15 WIB, aturan, poin, dan Bingo.">
+  <title>The Growth Challenge — Mission Control</title>
+  <style>
+    :root{--ink:#15263b;--night:#0c1625;--night2:#14283d;--cream:#f8f6f1;--paper:#fffefd;--muted:#637084;--line:#dde3e5;--gold:#e4b666;--green:#3d8069;--red:#b95d56;--focus:#438ce0;--shadow:0 18px 48px rgba(17,32,48,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;color:var(--ink);background:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:4px}::selection{background:#efd19a;color:#142036}
+    .container{width:min(1140px,calc(100% - 40px));margin:auto}.topbar{z-index:50;position:sticky;top:0;background:rgba(12,22,37,.97);color:white;border-bottom:1px solid rgba(255,255,255,.10);backdrop-filter:blur(18px)}.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;min-width:0}.brand-mark{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(228,182,102,.5);border-radius:10px;background:rgba(228,182,102,.08);flex:0 0 auto}.brand-text{font-weight:800;font-size:12px;letter-spacing:.145em;line-height:1.5;white-space:nowrap}.brand-text span{display:block;font-weight:500;font-size:9px;letter-spacing:.22em;color:#e4b666}.navlinks{display:flex;align-items:center;gap:24px;color:#b9c6d5;font-size:12px;font-weight:600}.navlinks a:hover{color:#fff}.mini-clock{display:none;color:#f4cd8a;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:12px;letter-spacing:.04em}.topbar.scrolled .mini-clock{display:block}.topbar.scrolled .navlinks{display:none}
+    .hero{position:relative;background:linear-gradient(160deg,#0b1625 0%,#14283e 53%,#112d36 110%);overflow:hidden;color:#fff;padding:72px 0 95px;isolation:isolate}.hero:before{content:"";pointer-events:none;position:absolute;inset:0;background:radial-gradient(ellipse at 82% 20%,rgba(230,171,83,.115),transparent 32%),radial-gradient(ellipse at 20% 75%,rgba(63,139,139,.11),transparent 42%),repeating-linear-gradient(0deg,transparent 0 47px,rgba(255,255,255,.023) 48px 49px),repeating-linear-gradient(90deg,transparent 0 47px,rgba(255,255,255,.023) 48px 49px);z-index:-2}.hero:after{content:"";pointer-events:none;position:absolute;width:800px;height:400px;border:1px solid rgba(230,183,103,.07);border-radius:50%;transform:rotate(-25deg);right:-420px;top:130px;box-shadow:0 0 0 65px rgba(230,183,103,.018),0 0 0 140px rgba(230,183,103,.014);z-index:-1}
+    .hero-wrap{text-align:center;max-width:960px}.event-meta{display:inline-flex;align-items:center;gap:10px;justify-content:center;font-size:11px;font-weight:800;letter-spacing:.21em;color:#e2bb80;text-transform:uppercase}.event-meta:before,.event-meta:after{content:"";display:block;width:30px;height:1px;background:#c79455;opacity:.7}.hero h1{font-weight:900;font-size:clamp(40px,7.5vw,83px);letter-spacing:-.055em;line-height:.98;margin:22px auto 14px;text-wrap:balance}.hero h1 .gold{color:var(--gold)}.hero-sub{font-size:clamp(13px,1.8vw,17px);font-weight:500;color:#cad8e5;letter-spacing:.035em;margin:0 auto 37px}.hero-rule{width:86px;height:3px;border-radius:8px;margin:0 auto 36px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .clock-shell{position:relative;max-width:885px;margin:0 auto;padding:34px 38px 27px;background:linear-gradient(150deg,rgba(255,255,255,.095),rgba(255,255,255,.025));border:1px solid rgba(230,231,230,.18);border-radius:24px;box-shadow:0 30px 75px rgba(0,0,0,.20);overflow:hidden}.clock-shell:before{content:"";height:3px;position:absolute;top:0;left:20%;right:20%;background:linear-gradient(90deg,transparent,#efc584,transparent)}.clock-overline{color:#f0c989;text-transform:uppercase;font-weight:800;letter-spacing:.21em;font-size:11px}.clock-sub{margin:9px 0 25px;color:#cbd6e1;font-size:13px}.clock-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.clock-unit{padding:20px 8px 15px;border:1px solid rgba(229,236,245,.13);border-radius:15px;background:rgba(3,11,22,.44)}.clock-num{display:block;font-size:clamp(42px,7.8vw,86px);line-height:1.05;font-weight:850;letter-spacing:-.055em;font-variant-numeric:tabular-nums}.clock-label{display:block;color:#a9bed0;font-size:10px;letter-spacing:.19em;font-weight:700;margin-top:12px}.clock-foot{margin:25px auto 0;color:#d3dde4;font-size:13px;line-height:1.7}.clock-foot strong{color:#f1c884}.expired-content{display:none;text-align:center;gap:12px;padding:28px 10px 10px}.expired-content .expired-title{font-size:clamp(35px,8vw,66px);letter-spacing:-.055em;line-height:1.08;color:#f1bf77;font-weight:900}.expired-content p{font-weight:650;font-size:18px;color:#fff}.expired .clock-body{display:none}.expired .expired-content{display:grid}.time-up-banner{display:none;background:#65302f;color:#fff;text-align:center;padding:14px 20px;font-size:13px;font-weight:750;line-height:1.5}.time-up-banner.visible{display:block}.start-notice{display:inline-flex;align-items:center;gap:10px;font-size:12px;color:#bad1d4;margin-top:25px}.start-notice .dot{width:7px;height:7px;background:#75b89d;border-radius:50%;box-shadow:0 0 0 5px rgba(117,184,157,.10)}.hero-action{display:flex;justify-content:center;margin-top:26px}.link-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#e4b666;color:#15243a;padding:15px 27px;border-radius:10px;font-size:12px;font-weight:850;letter-spacing:.12em;box-shadow:0 12px 32px rgba(231,176,89,.15);transition:transform .18s,background .18s}.link-action:hover{transform:translateY(-2px);background:#f0c985}
+    main{background:var(--cream)}section.section{padding:90px 0 24px;scroll-margin-top:82px}.section-heading{display:flex;gap:18px;align-items:flex-start;margin-bottom:26px}.section-num{font-size:12px;font-weight:900;letter-spacing:.1em;color:#b38343;padding-top:10px}.eyebrow{font-weight:850;font-size:11px;color:#ad7d3b;text-transform:uppercase;letter-spacing:.2em;margin:0 0 9px}.section h2{font-size:clamp(29px,4vw,45px);letter-spacing:-.045em;line-height:1.12;margin:0 0 12px;font-weight:850}.section-intro{color:#68768a;font-size:14px;line-height:1.85;margin:0;max-width:730px}
+    .mission-panel{padding:42px;display:grid;grid-template-columns:1.12fr 1fr;gap:38px;align-items:center;background:linear-gradient(135deg,#fff,#f4f2eb);border:1px solid #e5e3da;border-radius:22px;box-shadow:var(--shadow)}.mission-quote{font-size:clamp(24px,3vw,36px);letter-spacing:-.035em;font-weight:840;line-height:1.35;margin:0}.mission-quote em{font-style:normal;color:#bd8a44}.mission-desc{font-size:14px;color:#647488;line-height:1.8;margin:18px 0 0}.mission-pills{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mission-pill{border:1px solid #e2e5e5;border-radius:14px;background:#fff;padding:20px 17px}.mission-pill strong{display:block;font-size:31px;letter-spacing:-.04em;font-weight:850}.mission-pill span{display:block;font-size:12px;color:#617184;font-weight:650;margin-top:5px}.mission-pill:last-child{grid-column:1/-1;display:flex;align-items:center;gap:15px;background:#f4f8f6}.mission-pill:last-child strong{font-size:20px;color:#377e66}.mission-pill:last-child span{margin:0;line-height:1.5}
+    .passport-layout{display:grid;grid-template-columns:1.04fr .96fr;gap:28px;align-items:start}.passport-card{background:#fff;border:1px solid #e4e5e1;border-radius:22px;padding:29px;box-shadow:var(--shadow)}.passport-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:19px}.passport-top .tag{font-size:11px;font-weight:850;letter-spacing:.11em;color:#8b683c}.passport-top .tag-alt{font-size:10px;color:#84909b}.bingo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.bingo-cell{border:1px solid #dce5e2;background:#fbfcfa;border-radius:11px;min-height:118px;padding:13px 7px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:.2s ease;position:relative}.bingo-cell strong{font-size:11px;letter-spacing:.01em;line-height:1.32}.bingo-cell small{font-size:10px;font-weight:750;color:#a47a3b}.bingo-cell.core small{color:#417d67}.bingo-cell.core{background:#f2f8f5;border-color:#d8e7dd}.bingo-cell.corner{background:#fff9f0;border-color:#ecdfc8}.bingo-cell.center{background:repeating-linear-gradient(135deg,#f0f1f2,#f0f1f2 7px,#e8eaed 7px,#e8eaed 8px);color:#94a1aa;border-style:dashed}.bingo-cell.center strong{color:#84929f}.bingo-cell.active{background:#d8f1e6;border:2px solid #378d70;box-shadow:inset 0 0 0 2px #fff}.bingo-cell.active::after{content:"✓";font-size:12px;color:#fff;background:#348b70;width:22px;height:22px;position:absolute;top:4px;right:4px;border-radius:50%;display:grid;place-items:center}.bingo-cell.active small{color:#336e59}.line-switches{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:18px}.line-button{border:1px solid #dce2e3;background:#fff;color:#455467;border-radius:9px;padding:10px 4px;font-weight:750;font-size:12px}.line-button[aria-pressed="true"]{background:#194737;color:#fff;border-color:#194737}.bingo-caption{color:#738191;font-size:11px;text-align:center;line-height:1.65;margin:15px 0 0}.passport-detail{display:grid;gap:14px}.sidecard{border:1px solid #e1e4e1;background:#fff;border-radius:16px;padding:23px;display:flex;gap:17px;align-items:flex-start}.sidecard .sc-icon{flex:0 0 46px;display:grid;place-items:center;height:46px;border-radius:13px;background:#f7ebd9;color:#946727}.sidecard.green .sc-icon{background:#e9f2ed;color:#34745f}.sidecard h3{font-size:16px;letter-spacing:-.02em;margin:2px 0 7px}.sidecard p{font-size:13px;line-height:1.8;color:#68788a;margin:0}.sidecard strong{color:#34465a}
+    .score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.score-card{background:#fff;border:1px solid #e5e6e0;border-radius:18px;padding:27px 28px 25px;min-height:186px}.score-card .sm-label{font-size:11px;letter-spacing:.11em;font-weight:850;color:#758394}.score-card .score-value{font-size:clamp(46px,5vw,66px);font-weight:900;letter-spacing:-.055em;line-height:1.1;margin:16px 0 2px}.score-card .score-value small{font-size:18px;letter-spacing:0}.score-card p{font-size:12px;color:#748194;margin:4px 0 0}.score-card.bonus .score-value{color:#37826a}.qualification{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}.qualification-left,.qualification-right{padding:32px;border-radius:18px}.qualification-left{background:#192d41;color:#fff}.qualification-left .eyebrow{color:#e6b96c}.qualification-left h3{font-size:26px;letter-spacing:-.04em;margin:5px 0 20px}.requirements{display:flex;align-items:stretch;gap:11px}.req{flex:1;border:1px solid rgba(255,255,255,.17);border-radius:11px;padding:19px 13px;display:flex;flex-direction:column;gap:6px}.req strong{font-size:39px;letter-spacing:-.06em;line-height:1}.req small{font-weight:700;font-size:11px;line-height:1.3;color:#cbdbe4}.and{display:grid;place-items:center;color:#e5c084;font-size:12px;font-weight:800}.qualification-left p{font-size:12px;color:#c9d5e0;line-height:1.8;margin:16px 0 0}.qualification-right{background:#fff;border:1px solid #e2e4df}.result{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:20px;border-bottom:1px solid #e7e9e7}.result:last-child{border:0;padding-bottom:0;padding-top:20px}.result label{font-size:14px;font-weight:850;display:block}.result span.note{display:block;color:#788698;font-size:12px;line-height:1.6;margin-top:5px}.result .value{font-size:clamp(29px,3vw,40px);font-weight:850;letter-spacing:-.05em;white-space:nowrap}.result .value.passed{color:#3e876e}.result .value.failed{color:#b45b56}.formula{border:1px solid #d8e4e0;border-radius:13px;padding:17px 20px;background:#f3f8f5;margin-top:17px;font-size:12px;color:#496b5b;line-height:1.8}.formula strong{color:#244c3a}
+    .rules-wrap{background:#fff;border:1px solid #e5e6e1;border-radius:22px;overflow:hidden}.rules-list{display:grid;grid-template-columns:1fr 1fr;gap:0}.rule{display:flex;gap:15px;padding:22px 25px;border-bottom:1px solid #eef0ed}.rule:nth-child(odd){border-right:1px solid #eef0ed}.rule:nth-last-child(-n+2){border-bottom:none}.rule-index{color:#c28b41;font-size:12px;font-weight:850;letter-spacing:.09em;padding-top:1px;flex:0 0 25px}.rule p{font-size:13px;line-height:1.7;color:#44576a;margin:0}.rule strong{font-weight:800;color:#23384e}
+    .finish{padding:90px 0 105px}.finish-card{border-radius:24px;text-align:center;padding:55px 25px;background:linear-gradient(150deg,#13273b,#143e40);color:#fff;position:relative;overflow:hidden}.finish-card:before{content:"";position:absolute;width:350px;height:350px;border:1px solid rgba(247,215,156,.13);border-radius:50%;left:-220px;top:-200px;box-shadow:0 0 0 55px rgba(237,197,129,.025),0 0 0 140px rgba(237,197,129,.02)}.finish-card .eyebrow{color:#e5b973}.finish-card h2{font-size:clamp(30px,5vw,52px);line-height:1.12;letter-spacing:-.05em;margin:8px 0 14px}.finish-card p{color:#c4d3da;font-size:14px;max-width:590px;line-height:1.85;margin:0 auto}.finish-card .finish-emphasis{font-weight:800;color:#fff;margin-top:22px}.site-footer{background:#0c1625;color:#8ea2b2;padding:24px 0;text-align:center;font-size:11px;line-height:1.8}.site-footer strong{color:#e0bc80}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}.footer-row p{margin:0}.mini-note{font-size:11px;color:#7b899a;line-height:1.5;margin-top:17px}
+    @media(max-width:840px){.mission-panel,.passport-layout,.qualification{grid-template-columns:1fr}.passport-layout{gap:18px}.mission-panel{gap:24px}.score-card{padding:22px}.navlinks{gap:13px}.navlinks a{font-size:11px}}
+    @media(max-width:600px){.container{width:min(100% - 28px,1140px)}.nav{height:60px}.brand-text{font-size:10px}.brand-text span{font-size:8px}.brand-mark{height:30px;width:30px}.navlinks{display:none}.mini-clock{font-size:11px}.hero{padding:49px 0 62px}.hero h1{font-size:clamp(40px,12vw,65px);line-height:1.02;margin-top:19px}.hero-sub{font-size:12px;line-height:1.6;margin:16px 0 25px}.event-meta{font-size:9px;letter-spacing:.13em}.event-meta:before,.event-meta:after{width:14px}.hero-rule{margin-bottom:23px}.clock-shell{padding:25px 12px 23px;border-radius:17px}.clock-grid{gap:7px}.clock-unit{border-radius:11px;padding:17px 2px 13px}.clock-num{font-size:clamp(35px,9vw,53px)}.clock-label{font-size:8px;letter-spacing:.08em;margin-top:9px}.clock-sub{font-size:11px;margin:9px 0 22px}.clock-overline{font-size:10px}.clock-foot{font-size:11px;line-height:1.6;margin-top:18px}.start-notice{margin-top:21px;font-size:11px;line-height:1.6}.hero-action{margin-top:20px}.link-action{font-size:11px}.section.section{padding-top:64px}.section-heading{gap:12px;margin-bottom:18px}.section-num{padding-top:7px;font-size:10px}.section h2{font-size:31px}.section-intro{font-size:13px}.mission-panel{padding:25px 23px;border-radius:16px}.mission-quote{font-size:24px}.mission-desc{font-size:13px}.mission-pill{padding:17px}.mission-pill strong{font-size:26px}.mission-pill span{font-size:11px}.passport-card{padding:16px;border-radius:17px}.passport-top{margin-bottom:13px}.bingo-grid{gap:5px}.bingo-cell{min-height:96px;padding:11px 3px;border-radius:8px;gap:4px}.bingo-cell strong{font-size:9px}.bingo-cell small{font-size:9px}.bingo-cell.active::after{width:18px;height:18px;top:2px;right:2px;font-size:10px}.line-switches{gap:5px}.line-button{font-size:10px;padding:10px 2px}.sidecard{padding:19px;gap:12px}.sidecard .sc-icon{height:40px;flex-basis:40px}.sidecard h3{font-size:15px}.sidecard p{font-size:12px}.score-grid{gap:9px}.score-card{padding:17px 11px;min-height:146px;border-radius:13px}.score-card .sm-label{font-size:9px;letter-spacing:0}.score-card .score-value{font-size:clamp(34px,9vw,52px);margin:13px 0 5px}.score-card .score-value small{font-size:11px}.score-card p{font-size:11px;line-height:1.4}.qualification{gap:12px;margin-top:16px}.qualification-left,.qualification-right{padding:24px 19px}.qualification-left h3{font-size:22px}.req{padding:13px 10px}.req strong{font-size:34px}.req small{font-size:10px}.rule{padding:17px 17px;border-right:none!important;border-bottom:1px solid #eef0ed!important}.rule:last-child{border-bottom:0!important}.rules-list{grid-template-columns:1fr}.rule p{font-size:12px}.finish{padding:65px 0 70px}.finish-card{padding:44px 19px}.finish-card p{font-size:12px}.footer-row{display:block}.footer-row p+p{margin-top:4px}}
+    @media(max-width:420px){.topbar.scrolled .brand-text{display:none}.topbar.scrolled .mini-clock{font-size:12px}}
+    @media(max-width:360px){.clock-unit{padding:13px 1px}.clock-num{font-size:32px}.clock-label{font-size:7px}.brand-text{font-size:9px}.bingo-cell strong{font-size:8px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+<!-- Single source of truth for deadline. To change it, edit MISSION_DEADLINE_WIB near the bottom. -->
+<div id="timeUpBanner" class="time-up-banner" role="status">WAKTU TANTANGAN TELAH BERAKHIR — HENTIKAN CHALLENGE DAN SEGERA KEMBALI KE TITIK KUMPUL.</div>
+<header class="topbar" id="siteHeader">
+  <div class="container nav">
+    <a href="#top" class="brand" aria-label="The Growth Challenge — kembali ke atas">
+      <span class="brand-mark" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 32 32" fill="none"><path d="M16 2l4.1 9.9L30 16l-9.9 4.1L16 30l-4.1-9.9L2 16l9.9-4.1L16 2z" stroke="#E4B666" stroke-width="1.5"/><circle cx="16" cy="16" r="3.2" fill="#E4B666"/></svg></span>
+      <span class="brand-text">THE GROWTH CHALLENGE<span>MISSION CONTROL</span></span>
+    </a>
+    <nav class="navlinks" aria-label="Navigasi utama"><a href="#mission">MISI</a><a href="#bingo">BINGO</a><a href="#points">POIN</a><a href="#rules">ATURAN</a></nav>
+    <span id="miniClock" class="mini-clock" aria-label="Sisa waktu">—</span>
+  </div>
+</header>
+<section class="hero" id="top" aria-labelledby="pageTitle">
+  <div class="container hero-wrap">
+    <div class="event-meta">UGM · 31 OKTOBER 2026</div>
+    <h1 id="pageTitle">THE <span class="gold">GROWTH</span><br>CHALLENGE</h1>
+    <p class="hero-sub">Take Initiative. Keep Learning. Shape Your Future.</p>
+    <div class="hero-rule" aria-hidden="true"></div>
+    <div class="clock-shell" id="clockShell">
+      <div class="clock-body">
+        <div class="clock-overline">MISSION COUNTDOWN</div>
+        <div class="clock-sub">Sisa waktu menuju batas akhir seluruh challenge</div>
+        <div class="clock-grid" role="timer" aria-label="Hitung mundur menuju batas akhir tantangan WIB">
+          <div class="clock-unit"><span class="clock-num" id="days">00</span><span class="clock-label">HARI</span></div>
+          <div class="clock-unit"><span class="clock-num" id="hours">00</span><span class="clock-label">JAM</span></div>
+          <div class="clock-unit"><span class="clock-num" id="minutes">00</span><span class="clock-label">MENIT</span></div>
+          <div class="clock-unit"><span class="clock-num" id="seconds">00</span><span class="clock-label">DETIK</span></div>
+        </div>
+        <p class="clock-foot">BATAS AKHIR · <strong data-deadline-hero>31 OKTOBER 2026 · 10.15 WIB</strong></p>
+      </div>
+      <div class="expired-content" id="expiredContent" role="status"><div class="clock-overline">MISSION COUNTDOWN</div><div class="expired-title">TIME IS UP!</div><p>Hentikan seluruh challenge dan segera kembali ke titik kumpul.</p><span style="font-size:12px;color:#c2d1dd" data-deadline-expired>Batas waktu: 31 Oktober 2026 · 10.15 WIB</span></div>
+    </div>
+    <div class="start-notice"><span class="dot" aria-hidden="true"></span> Waktu di atas adalah batas akhir, bukan aba-aba mulai.</div>
+    <div class="hero-action"><a class="link-action" href="#mission">BACA MISI &amp; ATURAN <span aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+<main>
+  <section class="section" id="mission" aria-labelledby="missionTitle"><div class="container">
+    <div class="section-heading"><div class="section-num">01</div><div><p class="eyebrow">THE BRIEF</p><h2 id="missionTitle">Your mission.</h2><p class="section-intro">Delapan challenge menanti. Setiap keputusan, keberhasilan, dan waktu yang tersisa menjadi bagian dari perjalanan kelompokmu.</p></div></div>
+    <div class="mission-panel"><div><p class="mission-quote">Berani memulai.<br><em>Berani bertumbuh.</em></p><p class="mission-desc">Challenge dikerjakan bersama sebagai satu kelompok, bukan beradu langsung melawan kelompok lain. Pilih urutan pos secara bebas, penuhi standar keberhasilan, dan dapatkan verifikasi fasilitator sebelum waktu habis.</p></div><div class="mission-pills"><div class="mission-pill"><strong>08</strong><span>Challenge tersedia</span></div><div class="mission-pill"><strong>01</strong><span>Passport per kelompok</span></div><div class="mission-pill"><strong>OPEN ROUTE</strong><span>Kelompok menentukan sendiri urutan pos yang dituju.</span></div></div></div>
+  </div></section>
+  <section class="section" id="bingo" aria-labelledby="bingoTitle"><div class="container">
+    <div class="section-heading"><div class="section-num">02</div><div><p class="eyebrow">MISSION PASSPORT</p><h2 id="bingoTitle">Kenali papan Bingo.</h2><p class="section-intro">Bingo terbentuk dari tiga stamp utama yang lengkap dalam satu garis sah. Kotak tengah bukan pos, tidak menghasilkan poin, dan tidak dihitung sebagai Bingo.</p></div></div>
+    <div class="passport-layout">
+      <div class="passport-card"><div class="passport-top"><span class="tag">PASSPORT · DEPAN</span><span class="tag-alt">CONTOH POLA BINGO</span></div>
+        <div class="bingo-grid" id="bingoGrid" aria-label="Ilustrasi delapan pos di papan Bingo">
+          <div class="bingo-cell corner active" data-cell="0"><strong>THE NUMBER</strong><small>30 PTS</small></div>
+          <div class="bingo-cell core active" data-cell="1"><strong>STICKY BALL</strong><small>50 PTS</small></div>
+          <div class="bingo-cell corner active" data-cell="2"><strong>WORD HUNT</strong><small>30 PTS</small></div>
+          <div class="bingo-cell core" data-cell="3"><strong>TRAFFIC JAM</strong><small>50 PTS</small></div>
+          <div class="bingo-cell center" data-cell="4"><strong>✕</strong><small>TIDAK BERLAKU</small></div>
+          <div class="bingo-cell core" data-cell="5"><strong>HYDROFLOW</strong><small>50 PTS</small></div>
+          <div class="bingo-cell corner" data-cell="6"><strong>PUZZLE QUEST</strong><small>30 PTS</small></div>
+          <div class="bingo-cell core" data-cell="7"><strong>CROCODILE RIVER</strong><small>50 PTS</small></div>
+          <div class="bingo-cell corner" data-cell="8"><strong>THE CODE</strong><small>30 PTS</small></div>
+        </div>
+        <div class="line-switches" role="group" aria-label="Pilih contoh garis Bingo yang sah"><button class="line-button" data-line="top" aria-pressed="true">ATAS</button><button class="line-button" data-line="bottom" aria-pressed="false">BAWAH</button><button class="line-button" data-line="left" aria-pressed="false">KIRI</button><button class="line-button" data-line="right" aria-pressed="false">KANAN</button></div>
+        <p class="bingo-caption" id="bingoCaption">Ilustrasi satu garis sah: ATAS. Ketuk pilihan lain untuk melihat garis Bingo yang diakui.</p>
+      </div>
+      <div class="passport-detail">
+        <div class="sidecard"><span class="sc-icon" aria-hidden="true"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></span><div><h3>Stamp utama · depan</h3><p>Stamp utama diberikan jika sebuah challenge telah dinyatakan berhasil oleh fasilitator pos. <strong>Hanya stamp utama</strong> yang digunakan untuk membentuk Bingo.</p></div></div>
+        <div class="sidecard green"><span class="sc-icon" aria-hidden="true"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 2.5 5.5L20 9l-4 4 .9 6L12 16l-4.9 3 .9-6-4-4 5.5-.5L12 3Z"/></svg></span><div><h3>Bonus stamp · belakang</h3><p>Bonus mengikuti ketentuan masing-masing pos. Setiap bonus stamp bernilai <strong>10 poin</strong>, tetapi <strong>tidak membentuk Bingo</strong>.</p></div></div>
+        <div class="sidecard"><span class="sc-icon" aria-hidden="true"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 20V4m0 1h14l-3 5 3 5H5"/></svg></span><div><h3>Empat garis yang sah</h3><p>Garis <strong>atas, bawah, kiri, atau kanan</strong>. Garis diagonal dan garis yang melewati kotak tengah tidak dihitung.</p></div></div>
+      </div>
+    </div>
+  </div></section>
+  <section class="section" id="points" aria-labelledby="pointsTitle"><div class="container">
+    <div class="section-heading"><div class="section-num">03</div><div><p class="eyebrow">POINTS &amp; ACHIEVEMENTS</p><h2 id="pointsTitle">Setiap capaian berarti.</h2><p class="section-intro">Nilai challenge dan bonus diperhitungkan hanya apabila kelompok memenuhi <strong>kedua syarat kelulusan</strong>.</p></div></div>
+    <div class="score-grid"><div class="score-card"><div class="sm-label">CORNER CHALLENGE</div><div class="score-value">30<small> PTS</small></div><p>4 pos pojok · per pos</p></div><div class="score-card"><div class="sm-label">CORE CHALLENGE</div><div class="score-value">50<small> PTS</small></div><p>4 pos tengah sisi · per pos</p></div><div class="score-card bonus"><div class="sm-label">BONUS STAMP</div><div class="score-value">10<small> PTS</small></div><p>Per stamp bonus yang diperoleh</p></div></div>
+    <div class="qualification"><div class="qualification-left"><p class="eyebrow">PASS REQUIREMENTS</p><h3>Syarat kelulusan</h3><div class="requirements"><div class="req"><strong>2</strong><small>BINGO<br>MINIMUM</small></div><div class="and">DAN</div><div class="req"><strong>3</strong><small>CORE CHALLENGE<br>MINIMUM</small></div></div><p>Kedua syarat wajib terpenuhi bersamaan. Bonus stamp tidak dihitung untuk Bingo maupun jumlah Core Challenge.</p></div><div class="qualification-right"><div class="result"><div><label>LULUS</label><span class="note">Tambahan poin kelulusan</span></div><div class="value passed">+1.000</div></div><div class="result"><div><label>TIDAK LULUS</label><span class="note">Seluruh poin dianulir</span></div><div class="value failed">0 PTS</div></div></div></div>
+    <div class="formula"><strong>PERHITUNGAN AKHIR</strong> · Jika lulus: 1.000 + poin seluruh challenge utama yang berhasil + (jumlah bonus stamp × 10). Jika tidak lulus: 0 poin.</div>
+  </div></section>
+  <section class="section" id="rules" aria-labelledby="rulesTitle"><div class="container">
+    <div class="section-heading"><div class="section-num">04</div><div><p class="eyebrow">RULES OF THE RACE</p><h2 id="rulesTitle">Aturan yang berlaku.</h2><p class="section-intro">Baca ketentuan ini sebelum berangkat. Mekanisme khusus setiap challenge disampaikan di pos masing-masing.</p></div></div>
+    <div class="rules-wrap"><div class="rules-list">
+      <div class="rule"><span class="rule-index">01</span><p>Setiap kelompok membawa <strong>satu Mission Passport</strong> dan menjaganya selama kegiatan.</p></div>
+      <div class="rule"><span class="rule-index">02</span><p>Kelompok <strong>bebas memilih urutan pos</strong> dan tidak harus menunggu kelompok lain. Challenge dimulai setelah pos dinyatakan siap oleh fasilitator.</p></div>
+      <div class="rule"><span class="rule-index">03</span><p>Setiap challenge memiliki <strong>standar keberhasilan</strong> yang harus dipenuhi untuk memperoleh stamp utama.</p></div>
+      <div class="rule"><span class="rule-index">04</span><p>Stamp diberikan <strong>hanya setelah diverifikasi fasilitator</strong>. Stamp utama ditempel di bagian depan passport.</p></div>
+      <div class="rule"><span class="rule-index">05</span><p>Bonus memiliki ketentuan masing-masing pos. Stamp bonus ditempel <strong>di belakang passport</strong> dan tidak berlaku untuk Bingo.</p></div>
+      <div class="rule"><span class="rule-index">06</span><p>Seluruh anggota wajib memperhatikan <strong>keselamatan, batas area kegiatan, dan instruksi fasilitator</strong>.</p></div>
+      <div class="rule"><span class="rule-index">07</span><p>Pada <strong data-deadline-rule>31 Oktober 2026, pukul 10.15 WIB</strong>, seluruh challenge harus dihentikan dan kelompok <strong>segera kembali ke titik kumpul</strong>.</p></div>
+      <div class="rule"><span class="rule-index">08</span><p>Keputusan verifikasi challenge dan pencatatan nilai akhir berada pada <strong>fasilitator/panitia</strong>.</p></div>
+    </div></div>
+    <p class="mini-note">Catatan waktu: countdown membaca jam perangkat dan menghitung ke batas waktu WIB (UTC+7). Jika jam perangkat tidak tepat, ikuti pengumuman resmi panitia.</p>
+  </div></section>
+  <section class="finish"><div class="container"><div class="finish-card"><p class="eyebrow">THE GROWTH CHALLENGE</p><h2>Make your move.<br>Own your growth.</h2><p>Pahami aturan. Jalani tantangan. Belajar dari setiap keputusan yang kamu ambil bersama kelompokmu.</p><p class="finish-emphasis">Sebelum waktu habis, kembali ke titik kumpul.</p></div></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-row"><p><strong>THE GROWTH CHALLENGE</strong> · UGM · 31 OKTOBER 2026</p><p>Take Initiative. Keep Learning. Shape Your Future.</p></div></footer>
+<script>
+  'use strict';
+  // CHANGE THIS ONE SETTING after the final operational meeting, if necessary.
+  // Explicit UTC+07:00 ensures the finish instant is 10:15 WIB on 31 Oct 2026.
+  const MISSION_DEADLINE_WIB = '2026-10-31T10:15:00+07:00';
+  const deadlineMs = Date.parse(MISSION_DEADLINE_WIB);
+  // Human-readable deadline labels are generated from the SAME setting.
+  const datePart = new Intl.DateTimeFormat('id-ID', {day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Jakarta'}).format(new Date(deadlineMs));
+  const timePart = new Intl.DateTimeFormat('id-ID', {hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Jakarta'}).format(new Date(deadlineMs)).replace(':','.');
+  document.querySelector('[data-deadline-hero]').textContent = datePart.toLocaleUpperCase('id-ID') + ' · ' + timePart + ' WIB';
+  document.querySelector('[data-deadline-expired]').textContent = 'Batas waktu: ' + datePart + ' · ' + timePart + ' WIB';
+  document.querySelector('[data-deadline-rule]').textContent = datePart + ', pukul ' + timePart + ' WIB';
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => String(n).padStart(2,'0');
+  const header = $('siteHeader');
+  let hasExpired = false;
+  function updateCountdown(nowMs = Date.now()) {
+    const ms = Math.max(0, deadlineMs - nowMs);
+    const days = Math.floor(ms / 86400000);
+    const hrs = Math.floor((ms % 86400000) / 3600000);
+    const min = Math.floor((ms % 3600000) / 60000);
+    const sec = Math.floor((ms % 60000) / 1000);
+    $('days').textContent = fmt(days);
+    $('hours').textContent = fmt(hrs);
+    $('minutes').textContent = fmt(min);
+    $('seconds').textContent = fmt(sec);
+    if (ms === 0) {
+      $('miniClock').textContent = 'WAKTU HABIS';
+      if (!hasExpired) {
+        $('clockShell').classList.add('expired');
+        $('timeUpBanner').classList.add('visible');
+        hasExpired = true;
+      }
+    } else {
+      $('miniClock').textContent = days+' HARI · '+fmt(hrs)+':'+fmt(min)+':'+fmt(sec);
+      if (hasExpired) {
+        $('clockShell').classList.remove('expired');
+        $('timeUpBanner').classList.remove('visible');
+        hasExpired = false;
+      }
+    }
+    return {days,hours:hrs,minutes:min,seconds:sec,expired:ms===0};
+  }
+  updateCountdown();
+  setInterval(updateCountdown,1000);
+  const lines = {
+    top:{indexes:[0,1,2],title:'ATAS'},
+    bottom:{indexes:[6,7,8],title:'BAWAH'},
+    left:{indexes:[0,3,6],title:'KIRI'},
+    right:{indexes:[2,5,8],title:'KANAN'}
+  };
+  function showLine(id){
+    const line = lines[id];
+    if (!line) return;
+    document.querySelectorAll('[data-cell]').forEach(el=>el.classList.toggle('active',line.indexes.includes(Number(el.dataset.cell))));
+    document.querySelectorAll('[data-line]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.line===id)));
+    $('bingoCaption').textContent = 'Ilustrasi satu garis sah: '+line.title+'. Ketuk pilihan lain untuk melihat garis Bingo yang diakui.';
+  }
+  document.querySelectorAll('[data-line]').forEach(el=>el.addEventListener('click',()=>showLine(el.dataset.line)));
+  const heroObserver = new IntersectionObserver(([entry])=>{
+    header.classList.toggle('scrolled',!entry.isIntersecting);
+  },{threshold:0,rootMargin:'-58px 0px 0px 0px'});
+  heroObserver.observe(document.querySelector('.hero'));
+</script>
+</body>
+</html>
